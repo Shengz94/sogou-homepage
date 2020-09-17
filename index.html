@@ -1,0 +1,168 @@
+<html>
+
+<style type="text/css">
+.top-nav li{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
+   float   : left;
+   padding : 5px;
+   font-size: small; 
+}
+
+.top-nav li a:hover{
+    color: #ff5a34;
+}
+
+.top-nav li a{
+    color: #666;
+    text-decoration:none; 
+}
+
+.top-nav li.show-more a i {
+    width: 0;
+    height: 0;
+    border-left: 4px dashed transparent;
+    border-top: 4px solid #666;
+    border-right: 4px dashed transparent;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    _top: 4px;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    vertical-align: top;
+    font-size: 0;
+    line-height: 0;
+}
+
+
+.logo{
+    height: 35%; 
+    position: relative;
+}
+
+.logo img{
+    position: absolute;
+    left: 50%;
+    margin-left: -220px;
+    bottom: 0;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    opacity: 1;
+    width: 440px;
+    height: 140px;
+
+}
+
+.search-box{
+    margin: 0 auto;
+    width: 489px;
+    position: relative;
+    border-radius: 3px;
+    height: 42px;
+    border: solid 1px #ababab;
+    padding: 0 154px 0 10px;
+    background: #fff;
+}
+
+.search-box .input-box {
+    display: block;
+    padding: 12px 0;
+    height: 18px;
+}
+
+.search-box .input-box input{
+    width: 108%;
+    height: 18px;
+    font-size: 16px;
+    color: #333;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    display: block;
+    -webkit-appearance: none;
+    font-family: arial,'pingfang sc',stheiti,'microsoft yahei',sans-serif;
+}
+
+
+.search-box .submit-button {
+position: absolute;
+right: 0;
+top: 0;
+z-index: 3;
+border-radius: 0 3px 3px 0;
+background-color: #fafafa;
+border-left: 1px solid #e6e6e6;
+}
+
+.search-box .submit-button input {
+    width: 99px;
+    height: 42px;
+    border: 0;
+    background: transparent;
+    display: block;
+    -webkit-appearance: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: 0;
+    font-size: 16px;
+    font-family: arial,'pingfang sc',stheiti,'microsoft yahei',sans-serif;
+}
+</style>
+<body>
+<div class="header">
+    <div  class="top-nav">
+        <ul>
+            <li><a>网页</a></li>
+            <li><a href="http://weixin.sogou.com/">微信</a></li>
+            <li><a href="http://zhihu.sogou.com/">知乎</a></li>
+            <li><a href="http://pic.sogou.com/">图片</a></li>
+            <li><a href="https://v.sogou.com/">视频</a></li>
+            <li><a href="http://mingyi.sogou.com/?fr=common_index_nav">明医</a></li>
+            <li><a href="http://hanyu.sogou.com/?fr=pcweb_index_nav">汉语</a></li>
+            <li><a href="https://baike.sogou.com/kexue/">科学</a></li>
+            <li><a href="http://english.sogou.com/?fr=pcweb_index_nav">英文</a></li>
+            <li><a href="https://wenwen.sogou.com/?ch=websearch">问问</a></li>
+            <li><a href="http://scholar.sogou.com/?fr=common_index_nav">学术</a></li>
+            <li class="show-more">><a更多</a><i class="m-arr"></i></li>
+        </ul>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="body">
+    <div class="logo">
+        <img src="http://dlweb.sogoucdn.com/pcsearch/web/index/images/logo_440x140_31de1d2.png?v=d6bfe569">
+    </div>
+    <div class="search-box">
+        <span class="input-box">
+            <input type="text">
+        </span>
+        <span class="submit-button">
+            <input type="submit" value="search">
+        </span>
+    </div>
+</div>
+<script type="text/javascript">
+    searchTextInput = document.querySelector('.input-box input');
+    searchTextBtn = document.querySelector('.submit-button input');
+
+    function search(text){
+        window.location.href = 'https://www.sogou.com/web?query=' + text;
+    }
+
+    searchTextBtn.addEventListener( 'click', function() {
+        search( searchTextInput.value );
+    });
+    
+</script>
+</body>
+
+</html> 
